@@ -3,6 +3,11 @@
 
 [2]. execute `data_generator.py` and create first version of csv data file
 
+
+                                    +------------------+
+                                    |  sample_data v1  |
+                                    +------------------+
+
 [3]. Do add -> commit -> push git operation before initializing DVC.
 
 [4].
@@ -37,3 +42,24 @@
     • `dvc commit`
     • `dvc push`
       → This command will push 2 files (1. unique hash formatted identifier. 2. Data file itself)
+
+[9]. Do git add -> git commit -> git push
+
+
+                                    +------------------+
+                                    |  sample_data v2  |
+                                    +------------------+
+                            
+
+        NOTE : After performing any dvc operation, whatever changes are happening in `S3` directory, git won't track this.
+
+[10]. Add new rows in `sample_data`.
+      • `python data_generator.py`
+      • `dvc status` (will show some changes)
+
+[11]. DVC operation
+      • `dvc commit`
+      • `dvc push`
+
+[12]. Git operations
+      • `git add csv_storage.dvc data_generator.py helper.txt` (Don't add `S3` because git won't track it)

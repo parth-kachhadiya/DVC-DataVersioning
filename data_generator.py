@@ -11,6 +11,16 @@ DIR_LOCATION = "csv_storage"
 
 df = pd.DataFrame(data)
 
+'''
+# V2 : Add new rows
+'''
+new_rows = [['Harry', 24, 'Delhi'], ['Babbar', 30, 'Ahmedabad']]
+
+for rw in new_rows:
+    df.loc[len(df)] = rw
+
+# ------------------------------------ 
+
 os.makedirs(DIR_LOCATION, exist_ok=True)
 
 file_path = os.path.join(DIR_LOCATION, "sample_data.csv")
