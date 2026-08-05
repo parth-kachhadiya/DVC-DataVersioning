@@ -4,3 +4,30 @@
 [2]. execute `data_generator.py` and create first version of csv data file
 
 [3]. Do add -> commit -> push git operation before initializing DVC.
+
+[4].
+    (a). `pip install dvc`
+    (b). `dvc init` (creates .dvc and .dvcignore) files
+
+[5]. create new directory named as `S3` for DVC data versioning 
+
+[6]. Give that location to DVC
+        `dvc remote add -d myremote S3`
+        NOTE:
+            • Instead of 'myremote' we can assign any name here.
+            • Right now we're giving our local directory 'S3' to DVC, but if our data is comming from AWS S3 than we can provide
+              that URL to that place.
+
+[7]. Give DVC to target data source location, on which we want to monitor.
+     • For this project `csv_storage` is our data source on which DVC will keep watch.
+        `dvc add <your_data_dir>/`
+     • Right now `<your_data_dir>/` will keep versioning all items availabel in that directory.
+     • If we want to track only specific file version than define file name '<your_data_dir>/<file>'.
+     NOTE:
+        → Since git is tracking that 'csv_storage', direct execution of the command `dvc add csv_storage/` will throw error.
+        → Execute 1. `git rm -r --cached 'csv_storage'` to untrack data directory from git.
+                  2. `git commit -m "stop tracking csv_storage"`
+                  3. `dvc add csv_storage/`
+                  4. `git add csv_storage.dvc .gitignore` Ensure that git will track those files.
+        → This 3rd command will add one file 'csv_storage.dvc' and also make some modification in '.dvc' directory
+        → You can also check `dvc status` just like `git status`

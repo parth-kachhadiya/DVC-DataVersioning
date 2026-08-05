@@ -1,0 +1,6 @@
+outs:
+- md5: e06b632e6b8e6d0808ae29bd088a9a37.dir
+  size: 70
+  nfiles: 1
+  hash: md5
+  path: csv_storage
