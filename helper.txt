@@ -31,3 +31,9 @@
                   4. `git add csv_storage.dvc .gitignore` Ensure that git will track those files.
         → This 3rd command will add one file 'csv_storage.dvc' and also make some modification in '.dvc' directory
         → You can also check `dvc status` just like `git status`
+
+[8]. Perform DVC operations
+
+    • `dvc commit`
+    • `dvc push`
+      → This command will push 2 files (1. unique hash formatted identifier. 2. Data file itself)
