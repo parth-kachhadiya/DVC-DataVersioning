@@ -1,0 +1,6 @@
+[1]. clone this repo using:
+    `git clone https://github.com/parth-kachhadiya/DVC-DataVersioning.git`
+
+[2]. execute `data_generator.py` and create first version of csv data file
+
+[3]. Do add -> commit -> push git operation before initializing DVC.
