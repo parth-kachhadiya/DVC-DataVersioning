@@ -81,3 +81,16 @@
 [15]. Git operations
       • `git add csv_storage.dvc data_generator.py helper.txt` (Don't add `S3` because git won't track it)
       • git commit -> git push 
+
+
+## Rol back
+
+    1. `git checkout <hash>`
+    2. `dvc status` (check status, will show something...)
+    3. `dvc pull` (get back and match data version with git's current version)
+
+## Back to original 
+
+    1. `git checkout main` (switch to main branch, it contains all versions)
+    2. `dvc status` (will show something...)
+    3. `dvc pull` (pull data version that matches current git code version)
