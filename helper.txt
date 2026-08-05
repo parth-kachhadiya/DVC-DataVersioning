@@ -63,3 +63,21 @@
 
 [12]. Git operations
       • `git add csv_storage.dvc data_generator.py helper.txt` (Don't add `S3` because git won't track it)
+      • git commit -> git push 
+
+
+                                    +------------------+
+                                    |  sample_data v3  |
+                                    +------------------+
+ 
+[13]. Add new rows in `sample_data`.
+      • `python data_generator.py`
+      • `dvc status` (will show some changes)
+
+[14]. DVC operation
+      • `dvc commit`
+      • `dvc push`
+
+[15]. Git operations
+      • `git add csv_storage.dvc data_generator.py helper.txt` (Don't add `S3` because git won't track it)
+      • git commit -> git push 

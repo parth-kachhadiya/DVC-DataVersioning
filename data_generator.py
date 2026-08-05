@@ -21,6 +21,13 @@ for rw in new_rows:
 
 # ------------------------------------ 
 
+'''
+# V3 : Add one more row
+'''
+df.loc[len(df)] = ['Charlie', 100, 'Boston']
+
+# ------------------------------------ 
+
 os.makedirs(DIR_LOCATION, exist_ok=True)
 
 file_path = os.path.join(DIR_LOCATION, "sample_data.csv")
